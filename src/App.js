@@ -7,13 +7,22 @@ import './App.css';
 
 // Components
 import Accordion from './components/Accordion';
-import Input from './components/Input';
 import Button from './components/Button';
+import Input from './components/Input';
+import TextArea from './components/TextArea';
 
 // Component data
 import accordionData from './components/Accordion/data.js'
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      inputPlaceholder: "Input field",
+      textAreaPlaceholder: "Text field"
+    }
+  }
 
   onButtonClick = (event) => {
     console.log("Clicked")
@@ -27,7 +36,8 @@ class App extends Component {
           <h2>Welcome to the React Component Library</h2>
         </div>
         <Accordion collapsibles={accordionData}/>
-        <Input />
+        <Input placeholder={this.state.inputPlaceholder}/>
+        <TextArea  placeholder={this.state.textAreaPlaceholder}/>
         <Button onButtonClick={this.onButtonClick}/>
       </div>
     );

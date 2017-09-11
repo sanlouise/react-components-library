@@ -8,15 +8,15 @@ import styles from './styles.css';
 const Input = ({
   label,
   onChange,
-  textarea,
   value,
+  placeholder
 }) => (
   <div>
     <h2>Input</h2>
     <input
       onChange={onChange}
       value={value}
-      placeholder={label}
+      placeholder={placeholder}
     />
   </div>
 );
@@ -25,6 +25,7 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
 };
 
 export default Input;
