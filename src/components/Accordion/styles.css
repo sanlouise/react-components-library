@@ -1,0 +1,24 @@
+.accordion {
+  width: 50%;
+}
+
+.collapsible .header {
+  align-items: center;
+  background-color: #000;
+  color: #FFF;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+.collapsible .body.show {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+.collapsible .body.hidden {
+  display: none;
+}
