@@ -1,6 +1,13 @@
+// Dependencies
 import React, { Component } from 'react';
+
+// Internals
 import logo from './logo.svg';
 import './App.css';
+
+// Externals
+import Accordion from './components/Accordion';
+import accordionData from './components/Accordion/data.js'
 
 class App extends Component {
   render() {
@@ -10,9 +17,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Accordion collapsibles={accordionData}/>
       </div>
     );
   }
