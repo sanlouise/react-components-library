@@ -8,6 +8,7 @@ import './App.css';
 // Externals
 import Accordion from './components/Accordion';
 import accordionData from './components/Accordion/data.js'
+import Input from './components/Input';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <Accordion collapsibles={accordionData}/>
+        <Input />
       </div>
     );
   }
