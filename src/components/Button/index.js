@@ -5,15 +5,14 @@ import PropTypes from 'prop-types';
 //Internals
 import styles from './styles.css';
 
-const Button = ({ onButtonClick }) => (
+const Button = ({ onClick }) => (
   <div>
-    <h2>Button</h2>
-    <button onButtonClick={onButtonClick}>Click me</button>
+    <button onClick={onClick}>Click me</button>
   </div>
 );
 
 Button.propTypes = {
-  onButtonClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Button;

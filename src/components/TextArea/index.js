@@ -11,7 +11,6 @@ const TextArea = ({
   placeholder,
 }) => (
   <div>
-    <h2>TextArea</h2>
     <textarea
       onChange={onChange}
       value={value}

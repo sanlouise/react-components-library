@@ -12,7 +12,6 @@ const Input = ({
   placeholder
 }) => (
   <div>
-    <h2>Input</h2>
     <input
       onChange={onChange}
       value={value}
