@@ -3,11 +3,14 @@ import React, { Component } from 'react';
 // Components
 import Accordion from '../components/Accordion';
 import Button from '../components/Button';
+import Checkbox from '../components/Checkbox';
 import Form from '../components/Form';
 import Input from '../components/Input';
 import Textarea from '../components/Textarea';
+import Pagination from '../components/Pagination';
 // Component Data
 import accordionData from './data/accordion';
+import paginationData from './data/pagination';
 // Internals
 import logo from './logo.svg';
 import './styles.scss';
@@ -50,6 +53,11 @@ class Assets extends Component {
         </div>
 
         <div className="Gradient-grey">
+          <h2>Checkbox</h2>
+          <Checkbox />
+        </div>
+
+        <div className="Gradient-grey">
           <h2>Textarea</h2>
           <Textarea label="I'm a textarea!" placeholder={this.state.textAreaPlaceholder} />
         </div>
@@ -62,6 +70,12 @@ class Assets extends Component {
             <Button type="submit">Click me!</Button>
           </Form>
         </div>
+
+        <div className="Gradient-grey">
+          <h2>Pagination</h2>
+          <Pagination data={paginationData}/>
+        </div>
+
       </div>
     );
   }
