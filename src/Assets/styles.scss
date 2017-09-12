@@ -1,25 +1,25 @@
-.App {
+.Assets {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.Assets-logo {
+  animation: Assets-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
+.Assets-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-intro {
+.Assets-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+@keyframes Assets-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
@@ -33,4 +33,43 @@
   background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(252,252,252,1) 83%, rgba(245,245,245,1) 100%);
   background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(252,252,252,1) 83%, rgba(245,245,245,1) 100%);
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(252,252,252,1) 83%, rgba(245,245,245,1) 100%);
+}
+
+.sl-button {
+  background: purple;
+}
+
+.sl-input {
+  background: purple;
+}
+
+.sl-accordion {
+  padding: 0;
+
+  ul {
+    padding: 0;
+  }
+}
+
+.sl-collapsible .sl-header {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  background-color: #eaeaea;
+}
+
+.sl-collapsible .sl-body.show {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.sl-collapsible .sl-body.hidden {
+  display: none;
 }
