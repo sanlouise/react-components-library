@@ -2,27 +2,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-//Internals
-import styles from './styles.css';
 
-const TextArea = ({
+const Textarea = ({
+  label,
   onChange,
-  value,
   placeholder,
+  value,
 }) => (
-  <div>
-    <textarea
-      onChange={onChange}
-      value={value}
-      placeholder={placeholder}
-    />
-  </div>
+  <textarea
+    label={label}
+    onChange={onChange}
+    placeholder={placeholder}
+    value={value}
+  />
 );
 
-TextArea.propTypes = {
+Textarea.propTypes = {
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string,
 };
 
-export default TextArea;
+export default Textarea;
