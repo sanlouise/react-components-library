@@ -4,25 +4,25 @@ import map from 'lodash/map';
 const mockData = [
   {
     id: 1,
-    content: "Uno Lorem Ipsum",
+    content: "First - Lorem Ipsum",
   },
   {
     id: 2,
-    content: "Dos Lorem Ipsum",
+    content: "Second - Lorem Ipsum",
   },
   {
     id: 3,
-    content: "Tres Lorem Ipsum",
+    content: "Third - Lorem Ipsum",
   },
   {
     id: 4,
-    content: "Cuatro Lorem Ipsum",
+    content: "Fourth - Lorem Ipsum",
   }
 ]
 
 const accordionData = map(mockData, (data) => ({
-  header: `This is header number ${data.id}`,
-  body: `Body: ${data.content}`,
+  header: `Click me to expand, ${data.id}`,
+  body: `${data.content}`,
 }));
 
 export default accordionData;
