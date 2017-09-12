@@ -2,8 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-//Internals
-import styles from './styles.css';
 
 const Input = ({
   label,
@@ -11,19 +9,18 @@ const Input = ({
   value,
   placeholder
 }) => (
-  <div>
-    <input
-      onChange={onChange}
-      value={value}
-      placeholder={placeholder}
-    />
-  </div>
+  <input
+    className="sl-input"
+    onChange={onChange}
+    value={value}
+    placeholder={placeholder}
+  />
 );
 
 Input.propTypes = {
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  value: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
 };
 
