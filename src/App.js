@@ -8,6 +8,7 @@ import './App.css';
 // Components
 import Accordion from './components/Accordion';
 import Button from './components/Button';
+import Form from './components/Form';
 import Input from './components/Input';
 import TextArea from './components/TextArea';
 
@@ -15,7 +16,6 @@ import TextArea from './components/TextArea';
 import accordionData from './components/Accordion/data.js'
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -24,7 +24,7 @@ class App extends Component {
     }
   }
 
-  onButtonClick = (event) => {
+  onClick = (event) => {
     console.log("Clicked")
   }
 
@@ -32,13 +32,34 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to the React Component Library</h2>
+          <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <Accordion collapsibles={accordionData}/>
-        <Input placeholder={this.state.inputPlaceholder}/>
-        <TextArea  placeholder={this.state.textAreaPlaceholder}/>
-        <Button onButtonClick={this.onButtonClick}/>
+
+        <div className="Gradient-grey">
+          <h2>Accordion</h2>
+          <Accordion collapsibles={accordionData} />
+        </div>
+
+        <div className="Gradient-grey">
+          <h2>Button</h2>
+          <Button onClick={this.onClick} />
+        </div>
+
+        <div className="Gradient-grey">
+          <h2>Input</h2>
+          <Input placeholder={this.state.inputPlaceholder} />
+        </div>
+
+        <div className="Gradient-grey">
+          <h2>Textarea</h2>
+          <TextArea placeholder={this.state.textAreaPlaceholder} />
+        </div>
+
+        <div className="Gradient-grey">
+          <h2>Form</h2>
+          <Form />
+        </div>
       </div>
     );
   }
