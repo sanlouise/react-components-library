@@ -2,8 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
-// Internals
-import './styles.css';
+
 
 class Accordion extends Component {
   static propTypes = {
@@ -22,8 +21,7 @@ class Accordion extends Component {
 
   onCollapsibleClick = (index) => {
     if (this.state.selectedIndex === index) {
-      this.setState({ selectedIndex: -1 });
-      return;
+      return this.setState({ selectedIndex: -1 });
     }
     this.setState({ selectedIndex: index });
   }
@@ -31,20 +29,22 @@ class Accordion extends Component {
   render () {
     const { onCollapsibleClick } = this;
     const { selectedIndex } = this.state;
-    const { collapsibles, toggledValue } = this.props;
+    const { collapsibles } = this.props;
 
     return (
-      <ul className="accordion">
-        <h2>Accordion</h2>
+      <ul className="sl-accordion hello">
         {map(collapsibles, ({ header, body }, index) => (
-          <ul className="collapsible" key={header}>
+          <ul
+            className="sl-collapsible"
+            key={header}
+          >
             <li
-              className="header"
+              className="sl-header"
               onClick={() => onCollapsibleClick(index)}
             >
               {header}
             </li>
-            <li className={`body ${selectedIndex === index ? 'show' : 'hidden'}`}>
+            <li className={`sl-body ${selectedIndex === index ? 'show' : 'hidden'}`}>
               {body}
             </li>
           </ul>
