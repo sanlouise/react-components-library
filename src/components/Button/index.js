@@ -2,17 +2,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-//Internals
-import styles from './styles.css';
 
-const Button = ({ onClick }) => (
-  <div>
-    <button onClick={onClick}>Click me</button>
-  </div>
+const Button = ({ children, onClick, type }) => (
+  <button
+    className="sl-button"
+    onClick={onClick}
+    type={type}
+  >
+    {children}
+  </button>
 );
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  type: PropTypes.string.isRequired,
+};
+
+Button.defaultProps = {
+  type: 'button',
 };
 
 export default Button;
