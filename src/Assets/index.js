@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Accordion from '../components/Accordion';
 import Button from '../components/Button';
 import Checkbox from '../components/Checkbox';
+import Dropdown from '../components/Dropdown';
 import Form from '../components/Form';
 import Input from '../components/Input';
 import Textarea from '../components/Textarea';
@@ -12,6 +13,7 @@ import Slider from '../components/Slider';
 // Component Data
 import accordionData from './data/accordion';
 import paginationData from './data/pagination';
+import dropdownData from './data/dropdown';
 //Component Documentation
 import accordionDocs from './documentation/accordion';
 import buttonDocs from './documentation/button';
@@ -104,6 +106,12 @@ class Assets extends Component {
             value={this.state.value}
             onChange={this.onSliderChange} />
           <Accordion className="sl-documentation" collapsibles={paginationDocs} />
+        </div>
+
+        <div className="Gradient-grey">
+          <h2>Dropdown</h2>
+          <Dropdown options={dropdownData} />
+          <Accordion className="sl-documentation" collapsibles={accordionDocs} />
         </div>
 
       </div>
