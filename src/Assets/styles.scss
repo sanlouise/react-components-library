@@ -36,15 +36,23 @@
 }
 
 .sl-button {
-  background: purple;
+  height: 30px;
+  width: 150px;
 }
 
 .sl-input {
-  background: purple;
+  height: 25px;
+  width: 200px;
+  font-size: 0.8em;
+  padding-left: 3px;
 }
 
 .sl-accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
+  width: 100%;
 
   ul {
     padding: 0;
@@ -55,10 +63,18 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  height: 50px;
+  height: 40px;
   justify-content: center;
   background-color: #eaeaea;
 }
+
+.sl-documentation .sl-collapsible .sl-header {
+  font-size: 0.9em;
+  padding: 10px;
+  height: 20px;
+  width: 100px;
+}
+
 
 .sl-collapsible .sl-body.show {
   align-items: center;
@@ -75,7 +91,7 @@
 }
 
 .sl-pagination {
-  ul li {
+  li {
     list-style: none;
     margin-right: 0.3em;
     color: blue;
@@ -84,10 +100,22 @@
     color: #000;
   }
 
+  ul {
+    padding: 0;
+  }
+
   #page-numbers {
     list-style: none;
     display: flex;
     justify-content: center;
+
+    li {
+      border: 1px solid #000;
+      border-radius: 2px;
+      height: 30px;
+      width: 30px;
+
+    }
   }
 }
 
