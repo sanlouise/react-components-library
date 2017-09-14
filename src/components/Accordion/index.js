@@ -32,7 +32,7 @@ class Accordion extends Component {
     const { collapsibles } = this.props;
 
     return (
-      <ul className="sl-accordion hello">
+      <ul className="sl-accordion">
         {map(collapsibles, ({ header, body }, index) => (
           <ul
             className="sl-collapsible"
@@ -42,10 +42,10 @@ class Accordion extends Component {
               className="sl-header"
               onClick={() => onCollapsibleClick(index)}
             >
-              {header}
+              <h4>{header}</h4>
             </li>
             <li className={`sl-body ${selectedIndex === index ? 'show' : 'hidden'}`}>
-              {body}
+              <p>{body}</p>
             </li>
           </ul>
         ))}
