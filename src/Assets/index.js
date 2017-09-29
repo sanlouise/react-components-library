@@ -1,6 +1,6 @@
 // Dependencies
 import React, { Component } from 'react';
-// Components
+// Externals
 import Accordion from '../components/Accordion';
 import Button from '../components/Button';
 import Checkbox from '../components/Checkbox';
@@ -10,19 +10,21 @@ import Input from '../components/Input';
 import Textarea from '../components/Textarea';
 import Pagination from '../components/Pagination';
 import Slider from '../components/Slider';
-// Component Data
-import accordionData from './data/accordion';
-import paginationData from './data/pagination';
-import dropdownData from './data/dropdown';
-//Component Documentation
-import accordionDocs from './documentation/accordion';
-import buttonDocs from './documentation/button';
-import checkboxDocs from './documentation/checkbox';
-import formDocs from './documentation/form';
-import inputDocs from './documentation/input';
-import textareaDocs from './documentation/textarea';
-import paginationDocs from './documentation/pagination';
 // Internals
+import {
+  accordionData,
+  dropdownData,
+  paginationData,
+} from './data';
+import {
+  accordionDocs,
+  buttonDocs,
+  checkboxDocs,
+  formDocs,
+  inputDocs,
+  paginationDocs,
+  textareaDocs,
+} from './documentation';
 import logo from './logo.svg';
 import './styles.scss';
 
@@ -61,7 +63,7 @@ class Assets extends Component {
 
         <div className="Gradient-grey">
           <h2>Button</h2>
-          <Button onClick={this.onClick}>I'm a button!</Button>
+          <Button onClick={this.onClick}>Click me!</Button>
           <Accordion className="sl-documentation" collapsibles={buttonDocs} />
         </div>
 
